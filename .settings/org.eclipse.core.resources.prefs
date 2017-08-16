@@ -1,0 +1,8 @@
+eclipse.preferences.version=1
+encoding//WebContent/content.html=UTF-8
+encoding//WebContent/login.html=UTF-8
+encoding//src/org/cloudbus/cloudsim/VmSchedulerTimeShared.java=UTF-8
+encoding//src/org/cloudbus/cloudsim/core/CloudSimShutdown.java=UTF-8
+encoding//src/org/cloudbus/cloudsim/core/CloudSimTags.java=UTF-8
+encoding//src/org/cloudbus/cloudsim/core/DeferredQueue.java=UTF-8
+encoding//src/org/cloudbus/cloudsim/core/FutureQueue.java=UTF-8

@@ -1,0 +1,101 @@
+ tbody tr:hover{
+ background-color:#4CB9FC;
+ }
+#vm-add:hover{background-color:#F0F0F0;}
+#vm-remove:hover{background-color:#F0F0F0;}
+#dc-add:hover{background-color:#F0F0F0;}
+#dc-remove:hover{background-color:#F0F0F0;}
+#hosts-add:hover{background-color:#F0F0F0;}
+#hosts-remove:hover{background-color:#F0F0F0;}
+ select{width:50px;height:20px;}
+
+#userbase{
+	position:relative;
+	border-radius: 7px;
+	width:850px;
+	height:200px;
+	background-color: #EEE;
+	margin: 10px 30px;
+}
+#cloudlet-left{margin-top: 3px;margin-left: 20px;float: left;width: 70%;}
+#cloudlet-left table{text-align: center;align-content: center;width: 100%;height:90%;width:100%;}
+#cloudlet-left table thead{font-size: 15px;width:100%;}
+#cloudlet-left table thead tr{display:block;}
+#cloudlet-left table tbody{display:block;overflow:auto;height:130px;}
+#cloudlet-left table tbody tr td{padding-top: 3px;font-size:10px;padding:2px;}
+#cloudlet-left table tbody tr td input{width:60px;height:20px;padding:0px;margin:1px;}
+#cloudlet-right{position:absolute;width: 100px;right:30px;height:200px;margin-top:30px;} 
+#vm-add{padding:4px 18px;border:none;border-radius: 5px;font-size:15px;margin-bottom:10px;background-color: #F5F5F5;font-family: Microsoft YaHei;}
+#vm-remove{padding:4px 18px;border:none;border-radius: 5px;font-size:15px;background-color: #F5F5F5;font-family: Microsoft YaHei;}
+
+#cloudlet-choose{width:600px;height:330px;background-color:#EEE;margin:10px 30px;border-radius: 8px;}
+.market-word{margin:10px 30px;}
+#cloudlet-choose select{width:70px;height:20px;margin:10px 30px;}
+input[type=radio]{margin:10px 20px;}
+
+#thread-choose{width:600px;height:200px;background-color:#EEE;margin:10px 30px;border-radius: 8px;}
+#thread-choose select{width:70px;height:20px;margin:10px 30px;}
+ 
+.datacenters{
+	position:relative;
+	border-radius: 7px;
+	width:1000px;
+	background-color:#EEEEEE ;
+	height: 200px;
+	margin:10px 30px;
+}
+.datacenters-left{margin-top: 3px;margin-left: 20px; width:80%;float: left;height: 77px;}
+.datacenters-left .table{height: 90%;text-align: center;align-content: center;width: 100%;overflow-y:scroll;}
+.datacenters-left .table thead{font-size: 15px;width:100%;}
+.datacenters-left .table thead tr { display:block;} 
+.datacenters-left .table tbody{display:block;overflow:auto;height:140px;}
+.datacenters-left .table tbody tr td{ padding-top: 3px;font-size:10px;padding:4px;} 
+.datacenters-left .table tbody tr td input{ padding:0;width: 70px;height:20px;redius:4px;} 
+.datacenters-right{position:absolute;width: 100px;right:30px;height:200px;margin-top:30px;}
+#dc-add{padding:4px 18px;border:none;border-radius: 5px;font-size:15px;margin-bottom:30px;background-color: #F5F5F5;font-family: Microsoft YaHei;}
+#dc-remove{padding:4px 18px;border:none;border-radius: 5px;font-size:15px;background-color: #F5F5F5;font-family: Microsoft YaHei;}
+
+	
+.DC-selected{align-content: center;text-align: center; margin: auto;}
+
+.hosts{
+	position:relative;
+	width:800px;
+	height:200px;
+	margin: 10px 30px;
+	display: none;
+	background-color: #eee;
+	border-radius: 7px;
+}
+.hosts-left{width: 70%;float: left;background-color: #eee;padding-left:20px;}
+.hosts-left table{text-align: center;align-content: center;width: 100%;margin-left:20px;}
+.hosts-left table thead{font-size: 15px;display:block;width:100%;}
+.hosts-left table thead tr{display:block;}
+.hosts-left table thead tr th{padding:2px;text-align: center;align-content: center;padding-left:30px;}
+.hosts-left table tbody{display:block;overflow:auto;height:140px;}
+.hosts-left table tbody tr td{padding-top: 3px;font-size:10px;padding:2px;width:60px;}
+.hosts-left table tbody tr td input{width:68px;height:20px;padding:2px;margin:0px;}
+.hosts-left select{width:70px;height:20px;}
+
+.hosts-right{position:absolute;width: 70px;right:100px;margin-top:40px;} 
+#hosts-add{padding:4px 18px;border:none;border-radius: 5px;font-size:15px;margin-bottom:10px;background-color: #F5F5F5;font-family: Microsoft YaHei;}
+#hosts-remove{padding:4px 18px;border:none;border-radius: 5px;font-size:15px;background-color: #F5F5F5;font-family: Microsoft YaHei;}
+
+.configure-ok{margin-left:50px;position:absulate;margin-top:40px;left:600px;}
+.configure-ok input{padding:2px 5px;}
+
+.result table{
+	border:none;padding:0;margin:0;
+}
+.result thead td{
+	font-family: "Arial","Microsoft YaHei","����","����",sans-serif;margin-buttom:10px;
+}
+.result td{
+	width:100px;border:none;padding:0px;margin:0;font-family: "Arial","Microsoft YaHei","����","����",sans-serif;
+}
+.result tbody tr:nth-child(odd) td { 
+background-color: #f0efee; 
+}
+
+
+

@@ -1,0 +1,20 @@
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td { 
+		margin:0px; padding:0px; 
+	}
+	.leftmenu li{
+  		list-style: none;
+  		margin-left:0px;
+  		text-indent: 15px;
+  		margin:1px auto;
+  		background-color:#eee;
+  		border-radius: 2px;
+  		padding:5px auto;
+	}
+	a{
+	 	text-decoration:none;
+	 	color:#000000;
+	 	font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+	}
+	.title span{
+		font: 20px  Tahoma,Helvetica,Arial,'宋体',sans-serif;
+	}

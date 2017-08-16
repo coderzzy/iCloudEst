@@ -1,0 +1,62 @@
+@CHARSET "UTF-8";
+/*添加背景图片
+
+*/
+.background-login{
+	background-image:url(images/background_login.jpg);	
+	background-size:cover;
+}
+.background-error{
+	background-image:url(images/background_error.jpg);	
+	background-size:cover;
+}
+.background-register{
+	background-image:url(images/background_register.png);
+	background-size:cover;
+}
+
+/*容器设置
+
+*/
+html, body {
+	margin:0;
+	padding:0;
+	height:100%;
+	width:100%;
+}
+#container {
+	min-height:100%;
+	height: auto !important;
+    height:100%;
+	width: 100%;
+	position:relative
+}
+
+/*头部设置
+
+*/
+#header {
+	padding: 10px;
+}
+
+/*登陆页面主体
+
+*/
+#login_page {
+	width: 400px;
+	margin: 0 auto;
+	padding-bottom: 60px;/*等于footer的高度*/
+}
+					
+/*页脚
+
+*/
+#footer {
+	font-family: tahoma, Arial;
+	font-size: 12px;
+	bottom: 0px;
+	position: absolute;
+	width: 100%;
+	height: 60px;/*脚部的高度*/
+	clear:both
+}

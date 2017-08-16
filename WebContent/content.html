@@ -1,0 +1,236 @@
+<!-- 仿真参数配置界面,html网页 -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>静态部署</title>
+	
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" >
+	<link rel="stylesheet" type="text/css" href="css/content.css">
+</head>
+
+<body>
+	<ol class="breadcrumb" style="margin-bottom: 10px;">
+	  <li><a href="index.jsp" target="_parent">首页</a></li>
+	  <li class="active">通用仿真部署</li>
+	  <li class="active">静态部署</li>
+	</ol>
+	<div class="Sim-title"><span style="font-size: 20px;margin-buttom:10px;">模拟器配置面板</span></div><!--页面标题-->
+	<div class="span12" id="configure-main">
+		<form action="simulatedAction.do" method="POST" target="_blank">
+		<div class="tabbable" id="tabs-771509">
+			<ul class="nav nav-tabs">
+				<li class="active">
+					<a href="#panel-1" data-toggle="tab">数据中心配置</a>
+				</li>
+				<li>
+					<a href="#panel-2" data-toggle="tab">主要配置</a>
+				</li>
+				<li>
+					<a href="#panel-3" data-toggle="tab">调度策略设置</a>
+				</li>
+			</ul>
+			<!-- 面板一  -->
+				<div class="tab-pane  active" id="panel-1">
+					<h2>请配置数据中心：</h2>
+					<div class="datacenters">
+						<div class="datacenters-left">
+							<table class="table" id="datacenters-table">
+								<thead>
+									<tr>
+										<th>DC编号</th>
+										<th>&nbsp;&nbsp;&nbsp;&nbsp;区域</th>
+										<th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;架构</th>
+										<th>&nbsp;&nbsp;&nbsp;&nbsp;操作系统</th>
+										<th>虚拟化技术</th>
+										<th>PE单价</th>
+										<th>内存单价</th>
+										<th>存储单价</th>
+										<th>带宽单价</th>
+										<th>主机数</th>
+									</tr>
+								</thead>
+								<tbody>
+								</tbody>
+							</table>	
+						</div>
+						<div class="datacenters-right">
+							<div><a id="dc-add">添加</a></div>
+							<br>
+							<div><a id="dc-remove">移除</a></div>
+						</div>
+					</div>
+					<div style="clear:both;"></div><!-- 清除布局 -->
+					<div class="DC-selected">您现在选择的是<strong class="DC-selected-name"></strong></div>
+					<!-- 主机列表 -->
+					<div class="hosts">
+						<div class="hosts-left">
+							<!-- table hosts -->
+							<table class="table" id="hosts-table">
+								<thead>
+									<tr>
+										<th>主机ID</th>
+										<th>内存</th>
+										<th>存储</th>
+										<th>带宽</th>
+										<th>MIPS</th>
+										<th>核数</th>
+										<th>主机调度机制</th>
+									</tr>
+								</thead>
+								<tbody>
+<!-- 									<tr class="dc1-hosts">
+										<td><input type="text" name="" value="1"></input></td>
+										<td><input type="text" name="" value="2048"></input></td>
+										<td><input type="text" name="" value="100000"></input></td>
+										<td><input type="text" name="" value="10000"></input></td>
+										<td><input type="text" name="" value="4"></input></td>
+										<td><input type="text" name="" value="1000"></input></td>
+									</tr> -->
+								</tbody>
+							</table>	
+						</div>
+						<div class="hosts-right">
+							<div><a id="hosts-add">添加</a></div>
+							<br>
+							<div><a id="hosts-remove">移除</a></div>
+						</div>
+						<div style="clear:both;"></div><!-- 清除布局 -->
+					</div>
+				</div>
+				
+				
+			<!-- 面板二 -->
+			<div class="tab-content">
+				<div class="tab-pane" id="panel-2">
+					<h2>请设置基础配置：</h2>
+					<div id="userbase">
+						<!-- 此处用户表格-->
+						<div id="cloudlet-left">
+							<!-- 添加userbase -->
+							<table id="cloudlet-table" class="table">
+								<thead>
+									<tr>
+										<th>虚拟机ID</th>
+										<th>内存</th>
+										<th>存储</th>
+										<th>带宽</th>
+										<th>MIPS</th>
+										<th>核数</th>
+										<th>虚拟化技术</th>
+										<th>虚拟机调度机制</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><input type="text" name="vm_id" value="1"></input></td>
+										<td><input type="text" name="vm_ram" value="512"></input></td>
+										<td><input type="text" name="vm_storage" value="1000"></input></td>
+										<td><input type="text" name="vm_bw" value="1000"></input></td>
+										<td><input type="text" name="vm_mips" value="500"></input></td>
+										<td><input type="text" name="vm_pe"value="1"></input></td>
+										<td><input type="text" name="vm_technology" value="Xen"></input></td>
+										<td><select class="vm_mechanism" name='vm_mechanism'><option value="1">TimeShared</option><option value="2">SpaceShared</option></select></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div id="cloudlet-right">
+							<!-- 添加按钮 -->
+							<!-- 
+							<input type="button" value="添加" id="vm-add"></input>
+							<input type="button" value="删除" id="vm-remove"></input>
+							-->
+							<div><a id="vm-add">添加</a></div>
+							<br>
+							<div><a id="vm-remove">移除</a></div>
+						</div>
+						<!-- <div style="width: 20%;background-color: green;height:50px;clear: both;"></div> -->
+					</div>
+					<div style="clear:both;"></div><!-- 清除布局 -->
+					<div id="cloudlet-choose">
+						<span class="market-word">任务数量:&nbsp;&nbsp;&nbsp;&nbsp;</span><select class="cloudlet_num" name='cloudlet_num' 
+						onchange="getNewNum(this.options[this.options.selectedIndex].value)">
+						<option value="10">10</option>
+						<option value="20">20</option>
+						<option value="30">30</option>
+						<option value="40">40</option>
+						<option value="50">50</option>
+						<option value="100">100</option>
+						<option value="200">200</option>
+						<option value="500">500</option>
+						</select>
+						<br>
+						<span class="market-word">任务最小量:</span><select class="cloudlet_minlength" name='cloudlet_minlength'
+						onchange="getNewMin(this.options[this.options.selectedIndex].value)">
+						<option value="30000">30000</option>
+						<option value="40000">40000</option>
+						<option value="50000">50000</option>
+						</select>
+						<br>
+						<span class="market-word">任务最大量:</span><select class="cloudlet_maxlength" name='cloudlet_maxlength'
+						onchange="getNewMax(this.options[this.options.selectedIndex].value)">
+						<option value="70000">70000</option>
+						<option value="80000">80000</option>
+						<option value="90000">90000</option>
+						</select>
+						<br>
+						<span class="market-word">输入容量:&nbsp;&nbsp;&nbsp;&nbsp;</span><select class="cloudlet_inputsize" name='cloudlet_inputsize'>
+						<option value="200">200</option>
+						<option value="300">300</option>
+						<option value="400">400</option>
+						</select>
+						<br>
+						<span class="market-word">输出容量:&nbsp;&nbsp;&nbsp;&nbsp;</span><select class="cloudlet_outputsize" name='cloudlet_outputsize'>
+						<option value="200">200</option>
+						<option value="300">300</option>
+						<option value="400">400</option>
+						</select>
+						<br>
+						<input type="radio" name="cloudlet" value="0" checked="checked" />
+						方案一：任务数：<span class="span_num">10</span>；任务大小[<span class="span_min">30000</span>,<span class="span_max">70000</span>]，等差递增.<br>
+						<input type="radio" name="cloudlet" value="1" />
+						方案二：任务数：<span class="span_num">10</span>；任务大小[<span class="span_min">30000</span>,<span class="span_max">70000</span>]，等差递减.<br> 
+						<input type="radio" name="cloudlet" value="2" />
+						方案三：任务数：<span class="span_num">10</span>；任务大小[<span class="span_min">30000</span>,<span class="span_max">70000</span>]，在区间内随机.<br>
+					</div>
+				</div>
+				
+				<!-- 面板3 -->
+				<div class="tab-content">
+				<div class="tab-pane" id="panel-3">
+					<h2>请选择算法：</h2>
+					<div style="margin-top: 30px;">
+						<select name="algorithm" style="height:30px;width:150px;margin-left: 100px;">
+							<option value='1'>RR轮询算法</option>
+							<option value='2'>Min-min(极小算法)</option>
+							<option value='3'>改进的Min-min贪心算法</option>
+							<option value='4'>Max-min fairness(最大最小公平算法)</option>
+						</select>
+					</div>
+					<div class="configure-ok">
+					<input type="submit" name="configure-button" id="configure-button" value="确认配置"></input>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</form>
+	</div>
+	
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/content.js"></script>	
+	<script type="text/javascript">
+		function getNewNum(num){
+			$(".span_num").text(num);
+		}
+		function getNewMin(min){
+			$(".span_min").text(min);
+		}
+		function getNewMax(max){
+			$(".span_max").text(max);
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!-- 登录失败界面,html页面 -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>login-error</title> 
+		
+		<!-- h-ui样式表 -->
+		<link rel="stylesheet" type="text/css" href="css/h-ui/style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/h-ui/H-ui.css">
+	</head> 
+	<body>
+	<div id="container" class="background-error text-c"><!-- 内容居中对齐，块居中对齐 -->
+		<div id="login_page">
+			<h1>&nbsp;</h1>
+			<div class="mt-20">&nbsp;</div>
+			<div class="mt-20">&nbsp;</div>
+			<div class="mt-20">&nbsp;</div>
+			<div class="panel panel-danger">
+				<div class="panel-header">验证失败</div>
+				<div id="div_back" class="panel-body"></div><!-- 具体内容在js中实现 -->
+			</div>
+		</div>
+
+		<!-- 5s之后返回登陆界面 -->
+		<script type="text/javascript">
+    		var start = 5;  
+    		var step = -1;  
+    		function count() {  
+    			document.getElementById("div_back").innerHTML = 
+    				"<a href='login.jsp'>点此返回至首页，或者页面将在" +start+ "秒后返回...</a>"; 
+        		start += step;  
+        		if (start <= 0) {  
+            		start = 5;  
+            		//alert(start);  
+            		window.location = "index.jsp";//重定位  
+        		}  
+        		setTimeout("count()", 1000);  
+    		}  
+    		window.onload = count;  
+		</script>
+	</div>
+	</body>
+</html>
